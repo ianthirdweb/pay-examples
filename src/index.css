@@ -5,12 +5,12 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --accent: 0 0% 14.9%;
 }
 
 a {
@@ -26,12 +26,70 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  height: 100vh;
+  background: #000;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.gradient {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 66vh;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./assets/bottom-gradient.png");
+}
+
+.mtb {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.relative {
+  display: flex;
+  position: relative;
+}
+
+.transaction-button-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  min-width: 320px;
+  justify-content: center;
+  border: 1px solid;
+  border-color: hsl(230deg 11.63% 17%);
+  background-color: hsl(var(--accent) / 0.3);
+  padding: 3rem;
+  padding-top: 2rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.6em;
   line-height: 1.1;
 }
 
