@@ -1,6 +1,7 @@
 import "./App.css";
-import { ConnectButton, PayEmbed } from "thirdweb/react";
-import { PayTransactionButton } from "./components/transaction-button";
+// import { PayEmbed } from "thirdweb/react";
+// import { PayTransactionButton } from "./components/transaction-button";
+import { ConnectButton } from "thirdweb/react";
 import { THIRDWEB_CLIENT } from "./lib/client";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
     <div className="container relative">
       <div className="container flex-1">
         <ConnectButton client={THIRDWEB_CLIENT} />
-        <div className="mtb">
+        {/* <div className="mtb">
           <h2>Pay Embed</h2>
           <PayEmbed
             client={THIRDWEB_CLIENT}
@@ -18,7 +19,7 @@ function App() {
         <div className="transaction-button-container">
           <h2>Transaction Flow</h2>
           <PayTransactionButton />
-        </div>
+        </div>*/}
       </div>
       <div className="gradient" />
     </div>
